@@ -1,7 +1,20 @@
 //const chai = require('chai');
 //const chaiAsPromised = require('chai-as-promised');
 
-const RevenuePage = require('../pages/revenue_page.js');
+var path = require('path');
+var chai = require('chai');
+var chaiAsPromised = require('chai-as-promised');
+chai.use(chaiAsPromised);
+var expect = chai.expect;
+var {defineSupportCode} = require(path.join(
+  __dirname,
+  '..',
+  '..',
+  '..',
+  'lib',
+  'cucumberLoader'
+)).load();
+
 
 //chai.use(chaiAsPromised);
 //const expect = chai.expect;
