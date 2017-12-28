@@ -1,5 +1,5 @@
 {
-  "name": "protractor-cucumber-testing",
+  "name": "protractor-example-jetblue",
   "version": "1.0.0",
   "keywords": [
     "cucumber",
@@ -15,21 +15,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@https://github.com/barbaracabral/protractor_cucumber_testing.git"
+    "url": "git@https://github.com/barbaracabral/protractor-example-jetblue.git"
   },
   "author": "Bárbara Cabral",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/barbaracabral/protractor_cucumber_testing/issues"
+    "url": "https://github.com/barbaracabral/protractor-example-jetblue/issues"
   },
   "homepage": "https://barbaracabral.wordpress.com/",
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "cucumber": "^2.3.1",
-    "cucumber-html-reporter": "^2.0.3",
-    "protractor": "^5.2.2",
-    "protractor-cucumber-framework": "^4.1.1",
-    "protractor-cucumber-steps": "^1.2.0"
+    "protractor": "^5.2.0"
   }
 }

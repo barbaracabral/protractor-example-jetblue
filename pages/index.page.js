@@ -1,14 +1,14 @@
 'use strict'
 
-class RevenuePage{
+class IndexPage{
   constructor(){
     //this.filtro = element(by.dataTest('filtro'));
   }
 
   visit(){
-    return browser.get('/#/revenues/transactions');
+    return browser.get('/#/');
   }
 
 
 }
-module.exports = RevenuePage;
+module.exports = IndexPage;
