@@ -6,36 +6,34 @@ const IndexPage = require('../pages/index.page.js');
 describe('Filtro de Voos', ()=> {
   const indexPage = new IndexPage();
 
+  //SEM Page Objects
   it('Deve pesquisar vôos saindo de Florianópolis para São Paulo', ()=>{
-    indexPage.visit();
+    browser.get('/#/');
+
     element(by.id('jbBookerDepart')).clear();
     element(by.id('jbBookerDepart')).sendKeys('Florianópolis');
-    element(by.model('departCal.date')).sendKeys('12-29-2017');
+    element(by.model('departCal.date')).sendKeys('07-18-2017');
     element(by.id('jbBookerArrive')).sendKeys('São Paulo');
-    element(by.model('returnCal.date')).sendKeys('12-29-2017');
+    element(by.model('returnCal.date')).sendKeys('07-19-2017');
 
     element(by.buttonText('Find it')).click();
 
-    var someObj = element(by.binding('errorMessage'));
+    //expect();
+  });
 
-    console.log(someObj);
-  //  console.dir(someObj);
+  //COM PageObjects
+  it('Deve pesquisar vôos saindo de Florianópolis para São Paulo', ()=>{
+    indexPage.visit();
 
-    //expect(element(by.binding('errorMessage'))).to.equal('Please enter valid departure city.');
+    //fill form
+    indexPage.insertDepartCity('Florianópolis');
+    indexPage.insertDepartDate('07-18-2017');
+    indexPage.insertArriveCity('São Paulo');
+    indexPage.insertArriveDate('07-19-2017');
 
-    browser.sleep('35000');
+    indexPage.findFlights();
 
-    //indexPage.pesquisarPokemon('mew');
-    //expect(listagemPage.resultados.count()).toEqual(2);
+    //var someObj = element(by.binding('errorMessage'));
+    //expect()
   });
 });
-
-/*
-describe('Inclusão de pokémons', ()=> {
-  const listagemPage = new ListagemPage();
-  it('Deve incluir um pokémon', ()=>{
-    listagemPage.visit();
-    listagemPage.incluirPokemon(POKEMON.new_pokemon);
-    expect(listagemPage.resultados.count()).toEqual(6);
-  });
-}); */
