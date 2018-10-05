@@ -3,7 +3,7 @@
 const IndexPage = require('../pages/index.page.js');
 //const POKEMON = require('../../data/db.js');
 
-describe('Filtro de Voos', ()=> {
+describe('Vôos inválidos', ()=> {
   const indexPage = new IndexPage();
 
   //SEM Page Objects
@@ -18,7 +18,9 @@ describe('Filtro de Voos', ()=> {
 
     element(by.buttonText('Find it')).click();
 
-    //expect();
+
+    var first_error = element.all(by.repeater('buttonItem in button.data').get(0).getText();
+    expect(first_error).to.equal("Please enter valid departure city");
   });
 
   //COM PageObjects
@@ -33,7 +35,6 @@ describe('Filtro de Voos', ()=> {
 
     indexPage.findFlights();
 
-    //var someObj = element(by.binding('errorMessage'));
-    //expect()
+    expect(indexPage.getErrorMessage(0)).to.equal("Please enter valid departure city");
   });
 });

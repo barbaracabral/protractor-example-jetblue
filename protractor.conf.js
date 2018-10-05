@@ -18,7 +18,7 @@ exports.config = {
   ],
 
  onPrepare: function () {
-    browser.manage().window().maximize(); // maximize the browser before executing the feature files
+    browser.manage().window().maximize(); 
 
     var chai = require('chai');
     var chaiAsPromised = require('chai-as-promised');

@@ -6,7 +6,6 @@ class IndexPage{
     this.departdate = element(by.model('departCal.date'));
     this.arrivecity = element(by.id('jbBookerArrive'));
     this.arrivedate = element(by.model('returnCal.date'));
-
     this.findflightsbutton = element(by.buttonText('Find it'));
   }
 

@@ -6,7 +6,7 @@
     "protractor",
     "e2e"
   ],
-  "description": "Aplicação de Testes Automatizados para testes e2e utilizando utilizando Protractor e Cucumber",
+  "description": "Aplicação de Testes Automatizados e2e utilizando Protractor e Cucumber",
   "main": "index.js",
   "scripts": {
     "test": "protractor cucumber.conf.js",
